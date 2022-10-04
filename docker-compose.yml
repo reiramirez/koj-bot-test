@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  postgresql:
+    image: docker.io/bitnami/postgresql:11
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
+      - POSTGRESQL_USERNAME=test
+      - POSTGRESQL_DATABASE=test
+    ports:
+      - "5432:5432"
